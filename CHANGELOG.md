@@ -4,6 +4,15 @@ All notable changes to the Google Ads Agent plugin will be documented here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the plugin follows commit-SHA-based versioning (every commit on `main` is a new version in the Anthropic community marketplace).
 
+## [1.0.1] — 2026-05-21
+
+### Added
+- **`@googleadsagent/ad-creative-mcp` 1.0.0 published to npm** — alternative distribution channel for users who want to update the MCP server independently of the plugin.
+
+### Changed
+- **`ad-creative` MCP server is now bundled** into the plugin at `servers/ad-creative-mcp/server.mjs` (455KB single-file ESM bundle with all dependencies inlined via esbuild). No external network fetch on install — faster cold start, works offline.
+- `.mcp.json` now launches `ad-creative` via `node ${CLAUDE_PLUGIN_ROOT}/servers/ad-creative-mcp/server.mjs` instead of `npx -y @googleadsagent/ad-creative-mcp`. The npm-published package remains available for users who want to override.
+
 ## [1.0.0] — 2026-05-21
 
 ### Initial public release

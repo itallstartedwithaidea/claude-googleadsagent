@@ -109,7 +109,7 @@ Inside Claude Code after installing the plugin:
 | Server | Source | Powers |
 |---|---|---|
 | `google-ads` | [`googleadsagent-mcp`](https://pypi.org/project/googleadsagent-mcp/) (PyPI) | Live Google Ads API — read, analyze, create, modify |
-| `ad-creative` | [`@googleadsagent/ad-creative-mcp`](https://www.npmjs.com/package/@googleadsagent/ad-creative-mcp) (npm) | Cloudinary-backed creative validation, resizing, optimization |
+| `ad-creative` | Bundled in `servers/ad-creative-mcp/server.mjs` (455KB, deps inlined) — also published as [`@googleadsagent/ad-creative-mcp`](https://www.npmjs.com/package/@googleadsagent/ad-creative-mcp) on npm | Cloudinary-backed creative validation, resizing, optimization |
 
 ### Skill categories (77 skills)
 
