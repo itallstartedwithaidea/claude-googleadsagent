@@ -1,0 +1,91 @@
+name: Validate plugin
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  schema-check:
+    name: JSON + YAML schema check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate plugin.json
+        run: |
+          python3 -c "import json; json.load(open('.claude-plugin/plugin.json'))"
+          echo "plugin.json is valid JSON"
+      - name: Validate .mcp.json
+        run: |
+          python3 -c "import json; json.load(open('.mcp.json'))"
+          echo ".mcp.json is valid JSON"
+      - name: Validate hooks.json
+        run: |
+          python3 -c "import json; json.load(open('hooks/hooks.json'))"
+          echo "hooks/hooks.json is valid JSON"
+      - name: Validate settings.json
+        run: |
+          python3 -c "import json; json.load(open('settings.json'))"
+          echo "settings.json is valid JSON"
+      - name: Validate monitors.json
+        run: |
+          python3 -c "import json; json.load(open('monitors/monitors.json'))"
+          echo "monitors/monitors.json is valid JSON"
+      - name: Check all SKILL.md have YAML frontmatter
+        run: |
+          fail=0
+          for d in skills/*/; do
+            first=$(head -1 "$d/SKILL.md")
+            if [ "$first" != "---" ]; then
+              echo "::error::Missing frontmatter in $d/SKILL.md"
+              fail=1
+            fi
+          done
+          for f in agents/*.md; do
+            first=$(head -1 "$f")
+            if [ "$first" != "---" ]; then
+              echo "::error::Missing frontmatter in $f"
+              fail=1
+            fi
+          done
+          exit $fail
+
+  no-secrets:
+    name: No secrets scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan for token-shaped strings
+        run: |
+          set +e
+          # Allow false positives in SECURITY.md (where we document the patterns)
+          # Allow placeholders in .env.example
+          # Allow workflow file itself
+          matches=$(grep -rEn 'sk-[a-zA-Z0-9]{40,}|ya29\.[a-zA-Z0-9_-]{50,}|pypi-AgE[a-zA-Z0-9]{20,}|ghp_[a-zA-Z0-9]{36}|AKIA[0-9A-Z]{16}' \
+            --include='*.md' --include='*.json' --include='*.js' --include='*.py' --include='*.toml' \
+            --exclude='SECURITY.md' --exclude='.env.example' --exclude='validate.yml' . 2>/dev/null || true)
+          if [ -n "$matches" ]; then
+            echo "$matches"
+            echo "::error::Token-shaped strings detected"
+            exit 1
+          fi
+          echo "Secret scan clean"
+
+  install-test:
+    name: Plugin install dry-run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Confirm directory layout
+        run: |
+          test -f .claude-plugin/plugin.json
+          test -f .mcp.json
+          test -f settings.json
+          test -d skills
+          test -d agents
+          test -d commands
+          test -d hooks
+          test -d monitors
+          echo "All required plugin directories present"

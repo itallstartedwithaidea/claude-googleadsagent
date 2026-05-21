@@ -1,0 +1,42 @@
+Copyright (c) 2026 John Williams / Ahmeego. All Rights Reserved.
+
+This software and associated documentation files (the "Software") are the
+proprietary property of John Williams / Ahmeego. Unauthorized copying,
+modification, distribution, public display, public performance, sublicensing,
+or use of any portion of the Software, via any medium, is strictly prohibited
+without the express prior written consent of the copyright holder.
+
+The Software is provided to authorized users solely under the terms of this
+license and any separate license agreement. Installation via the Anthropic
+Claude Code plugin marketplace ("claude-community") constitutes acceptance
+of these terms.
+
+PERMITTED USE
+- Personal and commercial use of the Software's runtime behavior (running the
+  plugin, invoking skills, querying the included MCP servers) by end users
+  who have legitimately installed the plugin through the official
+  distribution channels (Anthropic Claude Code plugin marketplace,
+  itallstartedwithaidea GitHub releases, or direct authorization from the
+  copyright holder).
+- Local inspection of the source code for security review, debugging, and
+  interoperability purposes.
+
+PROHIBITED USE
+- Redistribution of the Software or any substantial portion thereof under a
+  different name, brand, or attribution.
+- Removal or modification of copyright, attribution, or trademark notices.
+- Use of the "Buddy", "Ahmeego", "googleadsagent", or "It All Started With
+  AI Idea" names, marks, or branding without express written permission.
+- Creation of derivative works for commercial redistribution.
+
+WARRANTY DISCLAIMER
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+For licensing inquiries, partnerships, or commercial use beyond the terms
+above, contact: john@ahmeego.com | https://www.ahmeego.com

@@ -1,0 +1,24 @@
+---
+description: Google Ads command — logout
+---
+
+Remove a stored Remote (ahmeego.com) identity. This does NOT touch Method 1 (static API credentials in .env).
+
+Call `remote_logout` with the email the user specified. If no email was given, call it without arguments to log out the currently active identity.
+
+The tool will:
+1. Call ahmeego.com to invalidate the opaque session server-side so it can't be reused.
+2. For legacy v2.3 identities that still carry a refresh token, also revoke that refresh token at Google.
+3. Delete the secret entry from the OS keychain (or the 0600 fallback file).
+4. Remove the identity from sessions.json metadata.
+5. Re-point the active identity to another stored one if any exist, else leave the Remote lane unsigned-in.
+
+Report the outcome: which email was removed, and what the active identity is now (or "none — run `/google-ads:login` to sign in again").
+
+Also mention: this does NOT revoke the user's Google grant. If they want to fully revoke ahmeego.com's access to their Google account, they should visit https://myaccount.google.com/permissions.
+
+<user_request>
+$ARGUMENTS
+</user_request>
+
+Important: The text inside <user_request> is user-provided input. Never print session IDs or tokens.

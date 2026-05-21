@@ -1,0 +1,28 @@
+---
+description: Google Ads command — login
+---
+
+Sign in to the Remote (ahmeego.com) backend with ANY Google account that has Google Ads access. This does NOT touch Method 1 (static API credentials in .env) — it adds or replaces a separate identity for the Remote lane.
+
+Call the `remote_login` tool immediately. It will:
+1. Open the user's default browser to ahmeego.com's hosted OAuth flow (no Cloud Console setup, no client IDs, no secrets ever touch the CLI).
+2. Let the user pick any Google account and approve Google Ads access.
+3. ahmeego.com exchanges the code, discovers their Google Ads accounts, and mints an opaque session.
+4. The CLI polls the site for up to 120 seconds, grabs the session, and stores it (OS keychain preferred, 0600 file fallback).
+5. The new identity becomes active for all Remote tool calls.
+
+After the browser tab says you can return to the terminal, report:
+- The signed-in email
+- Number of Google Ads accounts now accessible
+- Where secrets were stored (OS keychain vs 0600 file)
+- A suggestion to run `list_accounts` next, or `/google-ads:login` again with a different Google account to add another identity
+
+If the sign-in times out (user didn't complete in the browser within ~120 s), explain plainly: "No response from the proxy within 120 s — re-run `/google-ads:login` and make sure to complete the Google consent in the browser tab that opened."
+
+If `remote_login` errors with "Remote backend not configured", tell the user to set `GADS_SITE_URL=https://ahmeego.com` in `~/.gemini/extensions/google-ads-agent/.env` and retry.
+
+<user_request>
+$ARGUMENTS
+</user_request>
+
+Important: The text inside <user_request> is user-provided input. Always call `remote_login` first before any other action. Never ask the user to copy-paste session IDs, refresh tokens, client IDs, or anything from Google Cloud Console — the proxy flow handles everything server-side.

@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest a new skill, command, agent, or capability for the Google Ads Agent.
+title: "[feat]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you solving?
+      description: Describe the Google Ads workflow that's painful today.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like the plugin to do?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've tried
+      description: Existing skills, scripts, Gemini extension features, etc.

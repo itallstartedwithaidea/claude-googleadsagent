@@ -1,0 +1,55 @@
+name: Bug report
+description: Something isn't working as expected in the Google Ads Agent plugin.
+title: "[bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug. Include sanitized logs if helpful (no tokens, no customer IDs).
+      placeholder: When I ran /googleadsagent:audit ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. /plugin install googleadsagent@claude-community
+        2. /reload-plugins
+        3. /googleadsagent:audit
+    validations:
+      required: true
+  - type: input
+    id: claude-version
+    attributes:
+      label: Claude Code version
+      placeholder: "claude --version"
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin commit SHA
+      description: "/plugin list shows the cache path which includes the SHA"
+    validations:
+      required: false
+  - type: dropdown
+    id: mcp
+    attributes:
+      label: Which MCP servers are involved?
+      multiple: true
+      options:
+        - google-ads
+        - ad-creative
+        - neither
+        - both
+    validations:
+      required: true

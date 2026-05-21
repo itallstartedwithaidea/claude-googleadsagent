@@ -1,0 +1,8 @@
+[
+  {
+    "name": "google-ads-anomaly-watch",
+    "command": "node ${CLAUDE_PLUGIN_ROOT}/monitors/anomaly-watch.js",
+    "description": "Periodically polls the Google Ads MCP server for performance anomalies (CPA spikes >20%, CTR drops >15%, zero-conversion spend) and surfaces them to Claude during the session.",
+    "when": "always"
+  }
+]

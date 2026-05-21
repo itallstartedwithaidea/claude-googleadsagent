@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "googleadsagent",
+  "displayName": "Google Ads Agent — Buddy",
+  "description": "The most comprehensive Google Ads and advertising automation plugin for Claude Code. Buddy enterprise agent (Opus-powered), MCP servers for Google Ads + Ad Creative, ~75 production skills across Google Ads, AI agent engineering, Claude mythos, software dev, security, infrastructure, productivity, web frontend, scientific research, and media creative. Slash commands, safety hooks, anomaly monitors. Built by Ahmeego (itallstartedwithaidea) — $350M+ in managed ad spend.",
+  "author": {
+    "name": "John Williams",
+    "email": "john@ahmeego.com"
+  },
+  "homepage": "https://www.ahmeego.com",
+  "repository": "https://github.com/itallstartedwithaidea/claude-googleadsagent",
+  "license": "LicenseRef-Proprietary",
+  "keywords": [
+    "google-ads",
+    "ppc",
+    "advertising",
+    "marketing",
+    "mcp",
+    "campaign-management",
+    "buddy",
+    "googleadsagent",
+    "ahmeego",
+    "itallstartedwithaidea",
+    "meta-ads",
+    "microsoft-ads",
+    "amazon-ads",
+    "linkedin-ads",
+    "tiktok-ads",
+    "reddit-ads",
+    "performance-marketing",
+    "creative-validation",
+    "claude-code",
+    "anthropic",
+    "ai-agent",
+    "opus",
+    "gaql",
+    "pmax",
+    "shopping-ads"
+  ]
+}

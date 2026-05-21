@@ -1,0 +1,38 @@
+# Google Ads Agent — Buddy
+# Claude Code plugin by Ahmeego (itallstartedwithaidea)
+# https://github.com/itallstartedwithaidea/claude-googleadsagent
+
+> The most comprehensive Google Ads + advertising automation plugin for Claude Code.
+> Buddy enterprise agent, 2 MCP servers, 77 production skills, slash commands,
+> safety hooks, anomaly monitors. Built by a practitioner with $350M+ in
+> managed ad spend.
+
+## Quickstart
+
+- Install via Anthropic community marketplace:
+  `/plugin marketplace add anthropics/claude-plugins-community`
+  `/plugin install googleadsagent@claude-community`
+- Self-host:
+  `/plugin marketplace add itallstartedwithaidea/claude-googleadsagent`
+  `/plugin install googleadsagent@claude-googleadsagent`
+
+## Docs
+
+- README: https://github.com/itallstartedwithaidea/claude-googleadsagent/blob/main/README.md
+- Wiki: https://github.com/itallstartedwithaidea/claude-googleadsagent/wiki
+- Homepage: https://www.ahmeego.com
+- Hosted tools: https://www.googleadsagent.ai
+
+## Plugin contents
+
+- agents/ — Buddy + 6 sub-agents (Simba, Nemo, Elsa, Aladdin, Moana, Baymax)
+- skills/ — 77 skills across 10 categories
+- commands/ — 7 slash commands (analyze, audit, optimize, status, login, logout, switch)
+- hooks/ — PreToolUse GAQL validator, PostToolUse audit logger
+- monitors/ — Background Google Ads anomaly watcher
+- .mcp.json — googleadsagent-mcp (PyPI) + @googleadsagent/ad-creative-mcp (npm)
+
+## License
+
+Proprietary — © 2026 John Williams / Ahmeego. All Rights Reserved.
+For licensing inquiries: john@ahmeego.com
