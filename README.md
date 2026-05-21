@@ -22,7 +22,7 @@
 - **Buddy as the default agent** — `settings.json` activates Buddy immediately on plugin load
 
 > Built by a practitioner with $350M+ in managed ad spend across Google, Meta, Microsoft, and Amazon.
-> Reference architecture is the production system behind [`googleadsagent.ai`](https://www.googleadsagent.ai).
+> Reference architecture is the production system behind [`ahmeego.com`](https://www.ahmeego.com).
 
 ---
 
@@ -150,7 +150,7 @@ Inside Claude Code after installing the plugin:
 - **Plugin source** — [github.com/itallstartedwithaidea/claude-googleadsagent](https://github.com/itallstartedwithaidea/claude-googleadsagent)
 - **Wiki + docs** — [github.com/itallstartedwithaidea/claude-googleadsagent/wiki](https://github.com/itallstartedwithaidea/claude-googleadsagent/wiki)
 - **Homepage** — [ahmeego.com](https://www.ahmeego.com)
-- **Hosted tools** — [googleadsagent.ai](https://www.googleadsagent.ai) — Buddy AI Agent, Auditor, Campaign Builder, Keyword Analyzer
+- **Hosted tools** — [ahmeego.com]([https://www.ahmeego.com/tools) — Buddy AI Agent, Auditor, Campaign Builder, Keyword Analyzer
 - **Author** — [@itallstartedwithaidea](https://github.com/itallstartedwithaidea) · [LinkedIn](https://www.linkedin.com/in/johnmichaelwilliams) · [Substack](https://itallstartedwithaidea.substack.com)
 
 ---
@@ -158,7 +158,7 @@ Inside Claude Code after installing the plugin:
 ## License
 
 Proprietary — © 2026 John Williams / Ahmeego. All Rights Reserved.
-See [LICENSE](LICENSE). For commercial use beyond the runtime grant, contact `john@ahmeego.com`.
+See [LICENSE](LICENSE). For commercial use beyond the runtime grant, contact `john@itallstartedwithaidea.com`.
 
 ---
 
