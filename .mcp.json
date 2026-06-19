@@ -2,7 +2,7 @@
   "mcpServers": {
     "google-ads": {
       "command": "uvx",
-      "args": ["--from", "googleadsagent-mcp", "googleadsagent-mcp"],
+      "args": ["--from", "googleadsagent-mcp", "gads-mcp"],
       "env": {
         "GOOGLE_ADS_DEVELOPER_TOKEN": "${GOOGLE_ADS_DEVELOPER_TOKEN}",
         "GOOGLE_ADS_CLIENT_ID": "${GOOGLE_ADS_CLIENT_ID}",
