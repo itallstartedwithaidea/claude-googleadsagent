@@ -64,7 +64,7 @@ The Google Ads MCP server needs OAuth credentials. Copy `.env.example` to `.env`
 | `GOOGLE_ADS_LOGIN_CUSTOMER_ID` | Your MCC account ID (no dashes) |
 
 Full walkthrough: [Wiki → Authentication](https://github.com/itallstartedwithaidea/claude-googleadsagent/wiki/Authentication)
-Or use the Ahmeego hosted OAuth flow: [ahmeego.com/docs/google-ads-auth](https://www.ahmeego.com/docs/google-ads-auth)
+Or use the Ahmeego hosted OAuth flow: [ahmeego.com](https://www.ahmeego.com)
 
 ---
 
